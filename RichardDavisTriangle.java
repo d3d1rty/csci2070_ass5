@@ -82,7 +82,7 @@ public class RichardDavisTriangle
    */
   public String toString()
   {
-    String strTri = "Base: " + this.getBase() + "Height: " + this.getHeight();
+    String strTri = "Base: " + this.getBase() + ", Height: " + this.getHeight();
     return strTri;
   }
 }
