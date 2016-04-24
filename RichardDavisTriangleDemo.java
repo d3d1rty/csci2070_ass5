@@ -12,6 +12,7 @@ public class RichardDavisTriangleDemo
    */
   public static void main(String[] args)
   {
+    System.out.println("[*] Instantiating objects...");
     // instantiates first triangle object and displays information
     RichardDavisTriangle triOne = new RichardDavisTriangle(10, 5, "Triangle One");
     System.out.println("Information for first RichardDavisTriangle object...");
@@ -23,7 +24,7 @@ public class RichardDavisTriangleDemo
 
     // instantiates second triangle object and displays information
     RichardDavisTriangle triTwo = new RichardDavisTriangle(5, 10, "Triangle Two");
-    System.out.println("Information for second RichardDavisTriangle object...");
+    System.out.println("\nInformation for second RichardDavisTriangle object...");
     System.out.println("Name= " + triTwo.getName() +
         ", Base= " + triTwo.getBase() +
         ", Height= " + triTwo.getHeight());
@@ -32,7 +33,7 @@ public class RichardDavisTriangleDemo
 
     // instantiates third triangle object and displays information
     RichardDavisTriangle triThree = new RichardDavisTriangle(2, 11, "Triangle Two");
-    System.out.println("Information for third RichardDavisTriangle object...");
+    System.out.println("\nInformation for third RichardDavisTriangle object...");
     System.out.println("Name= " + triThree.getName() +
         ", Base= " + triThree.getBase() +
         ", Height= " + triThree.getHeight());
@@ -40,6 +41,7 @@ public class RichardDavisTriangleDemo
     System.out.println(triThree.toString());
 
     // tests equality for first two triangles
+    System.out.println("\n[*] Testing object equality...");
     if (triOne.equals(triTwo)) {
       System.out.println("Triangle one and two have the same area.");
     } else {
@@ -47,6 +49,7 @@ public class RichardDavisTriangleDemo
     }
 
     // tests equality for first and third triangles
+    System.out.println("\n[*] Testing object equality...");
     if (triOne.equals(triThree)) {
       System.out.println("Triangle one and three have the same area.");
     } else {
