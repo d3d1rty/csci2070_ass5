@@ -1,8 +1,7 @@
 import java.util.Scanner;
-import java.util.Calendar;
 
 /**
- * This class tests the RichardDavisWorkerDemo class
+ * This class tests the RichardDavisProductionWorker class
  *
  */
 public class RichardDavisWorkerDemo
@@ -16,22 +15,41 @@ public class RichardDavisWorkerDemo
   {
     Scanner in = new Scanner(System.in);
 
-    // gets employee name information
-    System.out.print("Enter employee's name => ");
+    // gets worker name information
+    System.out.print("Enter worker's name => ");
     String name = in.nextLine();
-    in.nextLine();
 
-    // gets employee number information
-    System.out.print("Enter employee's number => ");
+    // gets worker number information
+    System.out.print("Enter worker's number => ");
     String number = in.nextLine();
-    in.nextLine();
 
     // gets hire date information
-    System.out.print("Enter the year the employee was hired => ");
+    System.out.print("Enter the date the worker was hired => ");
     String date = in.nextLine();
-    RichardDavisEmployee emp = new RichardDavisEmployee(name, number, date);
-    if (emp.validateNumber()) {
-      System.out.println("It worked!");
+
+    // gets hire date information
+    System.out.print("Enter the worker's shift => ");
+    int shift = in.nextInt();
+
+    // gets the pay rate information
+    System.out.print("Enter the worker's pay rate => ");
+    double payRate = in.nextDouble();
+
+    // creates a new production worker object using provided information
+    RichardDavisProductionWorker emp = new RichardDavisProductionWorker(name, number, date, shift, payRate);
+
+    // validates the worker's employee number
+    if (!emp.validateNumber()) {
+      System.out.println("The worker number is not valid.");
+    } else {
+      System.out.println("The worker number is valid.");
+    }
+
+    // validates the worker's shift number
+    if (!emp.validateShift()) {
+      System.out.println("The worker's shift is not valid.");
+    } else {
+      System.out.println("The worker's shift is valid.");
     }
   }
 }

@@ -31,6 +31,16 @@ public class RichardDavisEmployee
   }
 
   /**
+   * This method sets the employee's name
+   *
+   * @param  name  the name of the employee
+   */
+  public void setEmpName(String name)
+  {
+    empName = name;
+  }
+
+  /**
    * This method returns the employee's number
    *
    * @return  empNumber the number of the employee
@@ -38,6 +48,26 @@ public class RichardDavisEmployee
   public String getEmpNumber()
   {
     return empNumber;
+  }
+
+  /**
+   * This method sets the employee's number
+   *
+   * @param  num  the number of the employee
+   */
+  public void setEmpNumber(String num)
+  {
+    empNumber = num;
+  }
+
+  /**
+   * This method validates the employee number
+   *
+   * @return  result  the result of the validation
+   */
+  public boolean validateNumber()
+  {
+    return empNumber.matches("\\d{3}\\-[a-lA-L]");
   }
 
   /**
@@ -51,12 +81,12 @@ public class RichardDavisEmployee
   }
 
   /**
-   * This method validates the employee number
+   * This method sets the employee's hire date
    *
-   * @return  result  the result of the validation
+   * @param  date  the  hire date of the employee
    */
-  public boolean validateNumber()
+  public void setEmpHireDate(String date)
   {
-    return empNumber.matches("\\d{3}\\-[a-lA-L]");
+    empHireDate = date;
   }
 }
