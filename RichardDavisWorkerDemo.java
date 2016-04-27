@@ -29,7 +29,7 @@ public class RichardDavisWorkerDemo
     // gets hire date information
     System.out.print("Enter the year the employee was hired => ");
     String date = in.nextLine();
-    RichardDavisEmployee emp = RichardDavisEmployee(name, number, date);
+    RichardDavisEmployee emp = new RichardDavisEmployee(name, number, date);
     if (emp.validateNumber()) {
       System.out.println("It worked!");
     }
