@@ -10,19 +10,14 @@ public class RichardDavisEmployee
   private String empHireDate;
 
   /**
-   * This method returns the volume of a sphere
-   * or -1 if a negative argument is given
+   * This method instantiates an employee object
    *
-   * @param   r  the radius of the sphere
-   * @return  v  the volume of the solid object
    */
-  public static double getVolumeSphere(double r)
+  public RichardDavisEmployee(String name, String num, String hireDate)
   {
-    double v = -1.0;
-    if (!checkIfNegative(r)) {
-      v = (4.0/3.0)*(Math.PI)*(Math.pow(r, 3));
-    }
-    return v;
+    empName = name;
+    empNumber = num;
+    empHireDate = hireDate;
   }
 
   /**
@@ -53,5 +48,15 @@ public class RichardDavisEmployee
   public String getEmpHireDate()
   {
     return empHireDate;
+  }
+
+  /**
+   * This method validates the employee number
+   *
+   * @return  result  the result of the validation
+   */
+  public boolean validateNumber()
+  {
+    return empNumber.matches("\\d{3}\\-[a-lA-L]");
   }
 }
